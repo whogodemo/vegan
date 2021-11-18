@@ -1,0 +1,162 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>vegan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="style.css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<style>
+nav {
+	  width: 150px;
+	  position: absolute;
+	  top: 0%;
+	  left: 0%;
+	  
+	}
+	ul { padding: 0; }
+	li {
+	  list-style: none;
+	  line-height: 34px;
+	}
+	a {
+	  display: block; /* 중요 */
+	  text-decoration: none;
+	  color: #616161;
+	  text-align: center;
+	}
+	.snd_menu { background: #efefef; }
+	.trd_menu { background: #ddd; }
+	.sub_menu { display: none; } /* 서브메뉴들 숨김 */
+
+	.selec { background: #28A745; color: #efefef; }	
+	
+	#login {
+		width: 150px;
+		position: absolute;
+		top: 0%;
+		right: 0%;
+		list-style: none;
+		line-height: 34px;
+		}
+	
+	
+</style>
+
+<body>
+
+
+<div class="image">
+<img src="./vegan2.jpg" alt ="image miss" width="1260" height="600">
+
+
+<nav>
+	<ul id="main_menu">
+		<li><a href="#">LOCATION</a>
+			<ul class="snd_menu sub_menu">
+				<li><a href= "#">강남</a>
+					<ul class="trd_menu sub_menu">
+						<li><a href= "vegan.php?search=강남구">강남구</a></li>
+						<li><a href= "vegan.php?search=강동구">강동구</a></li>
+						<li><a href= "vegan.php?search=강서구">강서구</a></li>
+						<li><a href= "vegan.php?search=관악구">관악구</a></li>
+						<li><a href= "vegan.php?search=구로구">구로구</a></li>
+						<li><a href= "vegan.php?search=금천구">금천구</a></li>
+						<li><a href= "vegan.php?search=동작구">동작구</a></li>
+						<li><a href= "vegan.php?search=강서구">강서구</a></li>
+						<li><a href= "vegan.php?search=서초구">서초구</a></li>
+						<li><a href= "vegan.php?search=송파구">송파구</a></li>
+						<li><a href= "vegan.php?search=양천구">양천구</a></li>
+						<li><a href= "vegan.php?search=영등포구">영등포구</a></li>
+					</ul>
+				</li>
+				<li><a href= "#">강북</a>
+					<ul class="trd_menu sub_menu">
+						<li><a href= "vegan.php?search=강북구">강북구</a></li>
+						<li><a href= "vegan.php?search=광진구">광진구</a></li>
+						<li><a href= "vegan.php?search=노원구">노원구</a></li>
+						<li><a href= "vegan.php?search=도봉구">도봉구</a></li>
+						<li><a href= "vegan.php?search=동대문구">동대문구</a></li>
+						<li><a href= "vegan.php?search=마포구">마포구</a></li>
+						<li><a href= "vegan.php?search=서대문구">서대문구</a></li>
+						<li><a href= "vegan.php?search=성동구">성동구</a></li>
+						<li><a href= "vegan.php?search=성북구">성북구</a></li>
+						<li><a href= "vegan.php?search=은평구">은평구</a></li>
+						<li><a href= "vegan.php?search=용산구">용산구</a></li>
+						<li><a href= "vegan.php?search=중구">중구</a></li>
+						<li><a href= "vegan.php?search=중랑구">중랑구</a></li>
+						<li><a href= "vegan.php?search=종로구">종로구</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</nav>
+
+
+<div id="login"><a href= "vegan_login.html">LOGIN</a></div>
+  
+<span class="imtext">Vegan Restaurant in Seoul</span>
+</div>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<div class="container">
+    <br/>
+	
+	<div class="row justify-content-center">
+                        <div class="col-12 col-md-10 col-lg-8">
+                            <form class="card card-sm"
+							action="vegan.php" method="get">
+                                <div class="card-body row no-gutters align-items-center">
+                                    <div class="col-auto">
+                                        <i class="fas fa-search h4 text-body"></i>
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col">
+                                        <input class="form-control form-control-lg form-control-borderless" type="text" name = "search" placeholder="Search district or menu, restaurant">
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col-auto">
+                                        <button class="btn btn-lg btn-success" type="submit">Search</button>
+                                    </div>
+                                    <!--end of col-->
+                                </div>
+							
+							
+                            </form>
+                        </div>
+                        <!--end of col-->
+     </div>
+</div>
+
+
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function(){
+  
+  $('#main_menu > li > a').click(function(){
+    $(this).next($('.snd_menu')).slideToggle('fast');
+  })
+  
+  $('.snd_menu > li > a').click(function(e){
+    e.stopPropagation();
+    $(this).next($('.trd_menu')).slideToggle('fast');
+  })
+
+  
+  // 버튼 클릭 시 색 변경
+  $('li > a').focus(function(){
+    $(this).addClass('selec');
+  })
+  $("li > a").blur(function(){
+    $(this).removeClass('selec');
+  })
+  
+})
+
+
+</script>
+</body>
+</html>

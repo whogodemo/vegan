@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>vegan</title>
+<style>
+      body {
+        font-family: Consolas;
+        font-family: 12px;
+      }
+      table {
+        width: 100%;
+      }
+      th, td {
+        padding: 10px;
+        border-bottom: 1px solid #dadada;
+      }
+	  
+	  .imtext{
+	  top:0px;
+	  left:320px;
+	  color:#28A745;
+	  font-size:30px;
+	  width:800px;
+	  font-weight:bold;
+}
+	  
+    </style>
+</head>
+
+<body>
+
+<span class="imtext">There is no corresponding search result. Do you want to insert data?</span>
+
+<table>
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>category</th>
+          <th>telephone</th>
+		  <th>district</th>
+          <th>address</th>
+		  <th>menu</th>
+        </tr>
+      </thead>
+	 </table>
+<tbody>
+<form action="vegan_insert.php" method="post">
+      <input type="text" name="name" placeholder="Enter name of restaurant here" style="width:200px">
+      <input type="text" name="category" placeholder="Enter category here" style="width:200px">
+	  <input type="text" name="telephone" placeholder="Enter telephone here" style="width:200px">
+	  <input type="text" name="district" placeholder="Enter district here" style="width:200px">
+	  <input type="text" name="address" placeholder="Enter address here" style="width:200px">
+	  <input type="text" name="menu" placeholder="Enter menu here" style="width:200px">
+      <input type="submit" value="Submit">
+    </form>
+	</tbody>
+</body>
+</html>

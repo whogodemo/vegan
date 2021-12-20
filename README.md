@@ -1,7 +1,7 @@
 # vegan restaurants in Seoul
-2주만에 만들어본 기초적인 웹개발
+기초적인 웹개발
 
-서울에 있는 비건 레스토랑들의 정보와 위치를 알려주는 사이트
+서울에 있는 비건 레스토랑들의 정보와 위치를 알려주는 사이트로, 카카오 api와 연결했다.
 
 ![image](https://user-images.githubusercontent.com/74365895/144458198-6fbf8768-f31e-47a8-86d0-a010dca6ab22.png)
 

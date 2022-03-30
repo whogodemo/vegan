@@ -36,24 +36,26 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n' 
 IGNORE 1 ROWS;
 
-SELECT * FROM vegan WHERE name like '%롯데리아%' or name like '%본죽%'; --삭제할 데이터 조회
+SELECT * FROM vegan WHERE name like '%롯데리아%' or name like '%본죽%'; --중복된 데이터 조회
 
 BEGIN TRAN; --트랜잭션 시작
-DELETE FROM vegan WHERE name like '%롯데리아%' or name like '%본죽%'; --데이터 삭제
-SELECT * FROM vegan WHERE name like '%롯데리아%' or name like '%본죽%'; --삭제한 데이터 조회
+DELETE FROM vegan WHERE name like '%롯데리아%' or name like '%본죽%'; --중복된 데이터 삭제
+SELECT * FROM vegan WHERE name like '%롯데리아%' or name like '%본죽%'; -- 데이터 조회
 COMMIT TRAN; -- 트랜잭션 반영
 
 
 SET @CNT = 0;
 UPDATE VEGAN SET VEGAN.id = @CNT := @CNT+1;
 
-CREATE TABLE LOCATION (
+CREATE TABLE LOCATION ( --식당별 카카오맵 ID
     ID INT not null AUTO_INCREMENT,
     LOCATION_ID VARCHAR(100) not null,
     NAME VARCHAR(100) not null,
     PRIMARY KEY(ID)
 
     );
+    
+SELECT B.ID, B.LOCATION_ID, B.NAME FROM VEGAN AS A JOIN LOCATION AS B ON A.ID = B.ID
 
 SELECT search, COUNT(search) FROM history 
 GROUP BY search 
